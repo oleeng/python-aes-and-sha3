@@ -7,7 +7,7 @@ class AES_ECB(AES):
 	"""
 	# AES_ECB
 	This class implements AES in ECB (electronic codebook) mode. Since AES can only encrypt 128 bits of plaintext at a time (regardless of AES-128, -192 or -256 being used), to allow encryption of data of any given length it needs to be run in a specific mode that determines the way subsequent 128-bit-blocks are being encrypted. ECB mode is the simplest of those, as it encrypts each block individually. This will lead to identical blocks of plaintext being encrypted to identical blocks of cyphertext.
-	"""  
+	"""
 	def __init__(self, bitLength=128, key=None):
 		self._modeOfOperation = "ECB"
 		super().__init__(bitLength, key)
